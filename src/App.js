@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Box, HStack, VStack, Text, Button, RadioGroup, Stack, Radio, theme, useToast } from '@chakra-ui/react';
 
+/**
+ * @returns a minesweeper app 
+ * @author Haitam Chouiekh
+ */
 function App() {
   const cell = function (value, row, col, isRevealed, isFlagged) {
     return { value: value, row: row, col: col, isRevealed: isRevealed, isFlagged: isFlagged };
@@ -125,7 +129,7 @@ function App() {
     }
     setBoard(temp);
   }
-
+  
   function rightColor(elem) {
     if (elem.value != "💣") {
       if (elem.value === 1) return theme.colors.blue[500];
